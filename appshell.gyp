@@ -365,7 +365,7 @@
           ],
           'cflags': [
             '<!@(<(pkg-config) --cflags gtk+-2.0 gthread-2.0)',
-            '<(march)',
+            '<(march)'
           ],
           'include_dirs': [
             '.',
@@ -419,7 +419,8 @@
             'ldflags': [
               '-pthread',
               '-Wl,-rpath,\$$ORIGIN/',
-              '<(march)'
+              '<(march)',
+              '-no-pie'
             ],
             'libraries': [
               "$(BUILDTYPE)/libcef.so",
